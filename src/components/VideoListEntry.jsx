@@ -1,15 +1,44 @@
-var VideoListEntry = (props) => (
+var VideoListEntry = (props) => {
+  function onClick(event) {
+    props.callback(props.video);
+  }
 
-  <div className="video-list-entry media">
-    <div className="media-left media-middle">
-      <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt={props.video.snippet.title} />
+  return (
+    <div className="video-list-entry media" onClick={onClick}>
+      <div className="media-left media-middle">
+        <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="" />
+      </div>
+      <div className="media-body">
+        <div className="video-list-entry-title">{props.video.snippet.title}</div>
+        <div className="video-list-entry-detail">{props.video.snippet.description}</div>
+      </div>
     </div>
-    <div className="media-body">
-      <div className="video-list-entry-title">{props.video.snippet.title}</div>
-      <div className="video-list-entry-detail">{props.video.snippet.description}</div>
-    </div>
-  </div>
-);
+  );
+}
+
+// (
+//     <div className="video-list-entry media">
+//       <div className="media-left media-middle">
+//         <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="" />
+//       </div>
+//       <div className="media-body">
+//         <div className="video-list-entry-title">{props.video.snippet.title}</div>
+//         <div className="video-list-entry-detail">{props.video.snippet.description}</div>
+//       </div>
+//     </div>
+//   )
+// (
+
+//   <div className="video-list-entry media">
+//     <div className="media-left media-middle">
+//       <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt={props.video.snippet.title} />
+//     </div>
+//     <div className="media-body">
+//       <div className="video-list-entry-title">{props.video.snippet.title}</div>
+//       <div className="video-list-entry-detail">{props.video.snippet.description}</div>
+//     </div>
+//   </div>
+// );
 
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated

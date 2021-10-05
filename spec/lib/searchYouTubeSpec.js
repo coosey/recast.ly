@@ -57,9 +57,9 @@ describe('searchYouTube', function() {
 
     expect(requests[0].method).to.equal('GET');
   });
-
   it('should accept `query` send it in GET request', function() {
     searchYouTube('cats', () => {});
+    console.log(requests);
 
     var params = getURLSearchParams(requests[0].url);
     expect(params.q).to.equal('cats');

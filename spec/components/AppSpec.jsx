@@ -47,8 +47,8 @@ describe('App', function() {
       expect(playerTitle.innerHTML).to.equal(videoEntryTitle.innerHTML);
     });
   });
-
-  xdescribe('when rendering live data from YouTube', function() {
+  //removed x
+  describe('when rendering live data from YouTube', function() {
     beforeEach(function() {
       app = renderIntoDocument(
         <App />

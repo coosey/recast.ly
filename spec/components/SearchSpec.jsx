@@ -9,8 +9,8 @@ describe ('Search', function() {
   } = ReactTestUtils;
 
   var app, searchYouTubeStub;
-
-  xdescribe('when rendering live data from YouTube', function() {
+  //removed x
+  describe('when rendering live data from YouTube', function() {
     beforeEach(function() {
       searchYouTubeStub = sinon.stub();
       searchYouTubeStub.onCall(0).yields(window.fakeVideoData);
