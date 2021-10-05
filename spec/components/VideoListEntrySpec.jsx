@@ -1,4 +1,4 @@
-import VideoListEntry from '../../src/components/VideoListEntry.js';
+import VideoListEntry from './VideoListEntry.js';
 
 describe('VideoListEntry', function() {
   var {
